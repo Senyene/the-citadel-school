@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Citadel School - First Among Equals</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/announcements.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo-container">
+      <img src="./assets/images/logo.png" alt="The Citadel School Logo">
+      <div class="school-name">
+        <h1>The Citadel School</h1>
+        <p>First Among Equals</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="./index.html" class="active">Home</a></li>
+        <li><a href="./pages/about.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Our Schools</a>
+          <ul class="dropdown-menu">
+            <li><a href="./pages/schools/nursery.html">Nursery School</a></li>
+            <li><a href="./pages/schools/primary.html">Primary School</a></li>
+            <li><a href="./pages/schools/secondary.html">Secondary School</a></li>
+            <li><a href="./pages/schools/diploma.html">Diploma Programs</a></li>
+          </ul>
+        <li><a href="./pages/admissions.html">Admissions</a></li>
+        <li><a href="./pages/academics.html">Academics</a></li>
+        <li><a href="./pages/news-events.html">News & Events</a></li>
+        <li><a href="./pages/contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <button class="mobile-menu-toggle">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" style="background: linear-gradient(rgba(74, 4, 4, 0.8), rgba(74, 4, 4, 0.8)), url('./assets/images/school-building.jpg'); background-size: cover; background-position: center;">
+      <div class="hero-content">
+        <h1>Excellence in Education Since 1995</h1>
+        <p>Nurturing young minds in Okoria, Bayelsa State</p>
+        <a href="./pages/admissions.html" class="cta-button">Apply Now</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Our Schools</h2>
+        <div class="schools-grid">
+          <div class="school-card">
+            <img src="./assets/images/nursery-school.jpg" alt="Nursery School">
+            <div class="school-card-content">
+              <h3>Nursery School</h3>
+              <p>Building strong foundations for children aged 2-5 through play-based learning and early childhood development.</p>
+              <a href="./pages/schools/nursery.html" class="learn-more">Learn More →</a>
+            </div>
+          </div>
+          <div class="school-card">
+            <img src="./assets/images/primary-school.jpg" alt="Primary School">
+            <div class="school-card-content">
+              <h3>Primary School</h3>
+              <p>Quality foundational education for Grades 1-6 following the Nigerian UBE curriculum with modern teaching methods.</p>
+              <a href="./pages/schools/primary.html" class="learn-more">Learn More →</a>
+            </div>
+          </div>
+          <div class="school-card">
+            <img src="./assets/images/secondary-school.jpg" alt="Secondary School">
+            <div class="school-card-content">
+              <h3>Secondary School</h3>
+              <p>Comprehensive secondary education from JSS1-SS3, preparing students for WASSCE and university admission.</p>
+              <a href="./pages/schools/secondary.html" class="learn-more">Learn More →</a>
+            </div>
+          </div>
+          <div class="school-card">
+            <img src="./assets/images/diploma-programs.jpg" alt="Diploma Programs">
+            <div class="school-card-content">
+              <h3>Diploma Programs</h3>
+              <p>Post-secondary vocational and technical education programs accredited by NBTE for career development.</p>
+              <a href="./pages/schools/diploma.html" class="learn-more">Learn More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background-color: var(--peach-light);">
+      <div class="container">
+        <h2 class="section-title">Why Choose The Citadel School?</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">🎓</div>
+            <h3>Academic Excellence</h3>
+            <p>Consistent outstanding performance in national examinations with qualified and experienced teachers.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🏫</div>
+            <h3>Modern Facilities</h3>
+            <p>State-of-the-art classrooms, laboratories, library, and sports facilities for comprehensive education.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">👥</div>
+            <h3>Character Development</h3>
+            <p>Emphasis on moral values, leadership skills, and character building alongside academic achievement.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🌍</div>
+            <h3>Holistic Education</h3>
+            <p>Balanced curriculum covering academics, arts, sports, and extracurricular activities for well-rounded development.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Latest Announcements</h2>
+        <div class="announcements-container" id="announcements">
+          <!-- Filled by JavaScript -->
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="./pages/news-events.html" class="cta-button">View All Announcements →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <img src="./assets/images/logo.png" alt="The Citadel School Logo">
+          <div>
+            <h3>The Citadel School</h3>
+            <p>First Among Equals</p>
+          </div>
+        </div>
+        <p>Providing quality education from nursery to diploma level, nurturing future leaders with strong moral foundations since 1995.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./pages/about.html">About Us</a></li>
+          <li><a href="./pages/admissions.html">Admissions</a></li>
+          <li><a href="./pages/academics.html">Academics</a></li>
+          <li><a href="./pages/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Our Schools</h3>
+        <ul>
+          <li><a href="./pages/schools/nursery.html">Nursery School</a></li>
+          <li><a href="./pages/schools/primary.html">Primary School</a></li>
+          <li><a href="./pages/schools/secondary.html">Secondary School</a></li>
+          <li><a href="./pages/schools/diploma.html">Diploma Programs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <div class="contact-info">
+          <p><i class="icon-location"></i> Okoria, Agudama-Epie<br>Bayelsa State, Nigeria</p>
+          <p><i class="icon-phone"></i> +234 123 456 7890</p>
+          <p><i class="icon-email"></i> info@citadelschool.edu.ng</p>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2023 The Citadel School. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./js/main.js"></script>
+  <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+<!-- Firebase Config & Submission Script -->
+<script type="module">
+  import { db } from './js/firebase/config.js';
+
+  const form = document.getElementById("contactForm");
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name")?.value;
+      const email = document.getElementById("email")?.value;
+      const message = document.getElementById("message")?.value;
+
+      try {
+        await db.collection("messages").add({
+          name,
+          email,
+          message,
+          createdAt: new Date()
+        });
+        alert("Message sent!");
+        form.reset();
+      } catch (error) {
+        console.error("Error writing document: ", error);
+        alert("Failed to send message.");
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

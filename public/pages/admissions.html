@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions - The Citadel School</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/forms.css">
+  <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo-container">
+      <img src="../assets/images/logo.png" alt="The Citadel School Logo">
+      <div class="school-name">
+        <h1>The Citadel School</h1>
+        <p>First Among Equals</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Our Schools</a>
+          <ul class="dropdown-menu">
+            <li><a href="schools/nursery.html">Nursery School</a></li>
+            <li><a href="schools/primary.html">Primary School</a></li>
+            <li><a href="schools/secondary.html">Secondary School</a></li>
+            <li><a href="schools/diploma.html">Diploma Programs</a></li>
+          </ul>
+        </li>
+        <li><a href="admissions.html" class="active">Admissions</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="news-events.html">News & Events</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <button class="mobile-menu-toggle">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" style="height: 300px; background: linear-gradient(rgba(74, 4, 4, 0.8), rgba(74, 4, 4, 0.8)), url('../assets/images/school-building.jpg'); background-size: cover; background-position: center;">
+      <div class="hero-content">
+        <h1>Join The Citadel School</h1>
+        <p>Begin your journey towards academic excellence</p>
+      </div>
+    </section>
+
+    <section class="admissions-process">
+      <h2>Admission Process</h2>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Inquiry</h3>
+          <p>Submit an inquiry form or visit our campus</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Assessment</h3>
+          <p>Complete entrance evaluation (where applicable)</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Application</h3>
+          <p>Submit completed application with required documents</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Acceptance</h3>
+          <p>Receive admission decision and enrollment package</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="admission-requirements">
+      <h2>Requirements by Level</h2>
+      <div class="requirements-tabs">
+        <button class="tab-button active" data-tab="nursery-req">Nursery</button>
+        <button class="tab-button" data-tab="primary-req">Primary</button>
+        <button class="tab-button" data-tab="secondary-req">Secondary</button>
+        <button class="tab-button" data-tab="diploma-req">Diploma</button>
+      </div>
+      
+      <div class="requirements-content">
+        <div id="nursery-req" class="tab-content active">
+          <h3>Nursery School Requirements</h3>
+          <ul>
+            <li>Child must be at least 2 years old by September 1st</li>
+            <li>Completed application form</li>
+            <li>Birth certificate or sworn declaration of age</li>
+            <li>Medical immunization records</li>
+            <li>2 recent passport photographs</li>
+            <li>Medical certificate of fitness</li>
+          </ul>
+          <div class="requirement-note">
+            <strong>Note:</strong> Children should be potty-trained or in the process of being trained for nursery admission.
+          </div>
+        </div>
+        
+        <div id="primary-req" class="tab-content">
+          <h3>Primary School Requirements</h3>
+          <ul>
+            <li>Completed application form</li>
+            <li>Birth certificate or sworn declaration of age</li>
+            <li>Previous school reports (if applicable)</li>
+            <li>Medical immunization records</li>
+            <li>4 recent passport photographs</li>
+            <li>Entrance assessment (age-appropriate)</li>
+            <li>Transfer certificate (for students from other schools)</li>
+          </ul>
+          <div class="requirement-note">
+            <strong>Assessment Areas:</strong> Basic literacy, numeracy, and social readiness appropriate for the grade level.
+          </div>
+        </div>
+        
+        <div id="secondary-req" class="tab-content">
+          <h3>Secondary School Requirements</h3>
+          <ul>
+            <li>Completed application form</li>
+            <li>Birth certificate or sworn declaration of age</li>
+            <li>Primary school leaving certificate</li>
+            <li>Previous school reports (Primary 4-6)</li>
+            <li>Medical certificate of fitness</li>
+            <li>6 recent passport photographs</li>
+            <li>Entrance examination</li>
+            <li>Letter of good conduct from previous school</li>
+          </ul>
+          <div class="requirement-note">
+            <strong>Entrance Exam Subjects:</strong> English Language, Mathematics, Basic Science, and General Knowledge.
+          </div>
+        </div>
+        
+        <div id="diploma-req" class="tab-content">
+          <h3>Diploma Programs Requirements</h3>
+          <ul>
+            <li>Completed application form</li>
+            <li>Secondary school certificate (WAEC/NECO/NABTEB)</li>
+            <li>Minimum of 5 credits including English and Mathematics</li>
+            <li>Birth certificate or sworn declaration of age</li>
+            <li>Letter of recommendation from previous institution</li>
+            <li>Personal statement of purpose</li>
+            <li>8 recent passport photographs</li>
+            <li>Entrance examination and/or interview</li>
+          </ul>
+          <div class="requirement-note">
+            <strong>Program-Specific Requirements:</strong> Some programs may require specific subject combinations or work experience.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="online-application">
+      <h2>Online Application</h2>
+      <form id="applicationForm" class="application-form">
+        <div class="form-group">
+          <label for="applicantName">Student's Full Name*</label>
+          <input type="text" id="applicantName" name="applicantName" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="dob">Date of Birth*</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="applyingFor">Applying For*</label>
+          <select id="applyingFor" name="applyingFor" required>
+            <option value="">Select Level</option>
+            <option value="nursery">Nursery School</option>
+            <option value="primary">Primary School</option>
+            <option value="secondary">Secondary School</option>
+            <option value="diploma">Diploma Program</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="parentName">Parent/Guardian Name*</label>
+          <input type="text" id="parentName" name="parentName" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address*</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number*</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="address">Home Address*</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="previousSchool">Previous School (if applicable)</label>
+          <input type="text" id="previousSchool" name="previousSchool">
+        </div>
+        
+        <div class="form-group">
+          <label for="documents">Upload Required Documents</label>
+          <input type="file" id="documents" name="documents" multiple accept=".pdf,.jpg,.jpeg,.png">
+          <small>Please upload scanned copies of birth certificate, previous school reports, and other required documents (PDF, JPG, PNG formats only)</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="additionalInfo">Additional Information</label>
+          <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Please share any additional information about the student, special needs, or questions you may have..."></textarea>
+        </div>
+        
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+          <label for="agreeTerms">I certify that all information provided is accurate and agree to the school's terms and conditions*</label>
+        </div>
+        
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="newsletter" name="newsletter">
+          <label for="newsletter">I would like to receive updates and newsletters from The Citadel School</label>
+        </div>
+        
+        <button type="submit" class="submit-button">Submit Application</button>
+      </form>
+    </section>
+
+    <section class="section" style="background-color: var(--peach-light);">
+      <div class="container">
+        <h2 class="section-title">Admission Timeline</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+          <div class="timeline-item" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h3 style="color: var(--oxblood); margin-bottom: 1rem;">📅 Application Period</h3>
+            <p><strong>January - March:</strong> Applications open for the next academic session</p>
+          </div>
+          
+          <div class="timeline-item" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h3 style="color: var(--oxblood); margin-bottom: 1rem;">📝 Assessment Period</h3>
+            <p><strong>April - May:</strong> Entrance assessments and interviews conducted</p>
+          </div>
+          
+          <div class="timeline-item" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h3 style="color: var(--oxblood); margin-bottom: 1rem;">✅ Admission Results</h3>
+            <p><strong>June:</strong> Admission decisions communicated to applicants</p>
+          </div>
+          
+          <div class="timeline-item" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h3 style="color: var(--oxblood); margin-bottom: 1rem;">🎒 Registration</h3>
+            <p><strong>July - August:</strong> Registration and orientation for new students</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+          <div class="faq-item">
+            <button class="faq-question">
+              What is the minimum age for nursery admission?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Children must be at least 2 years old by September 1st of the academic year they wish to enroll. We also consider the child's developmental readiness for group learning.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              Is there an entrance examination for all levels?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Nursery students undergo a simple assessment to determine readiness. Primary and secondary students take age-appropriate entrance examinations. Diploma applicants may have interviews in addition to written tests.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              What are the school fees and payment options?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>School fees vary by level and are payable termly. We offer flexible payment plans and early payment discounts. Contact our admissions office for detailed fee structure and scholarship opportunities.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              Can I schedule a campus tour?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! We encourage prospective families to visit our campus. Tours are available on weekdays and selected Saturdays. Please contact our admissions office to schedule your visit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" style="text-align: center; padding: 4rem 0; background-color: var(--oxblood); color: white;">
+      <div class="container">
+        <h2 style="color: var(--peach); margin-bottom: 1.5rem;">Ready to Start Your Application?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Join our community of learners and leaders</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="#applicationForm" class="cta-button">Apply Online</a>
+          <a href="contact.html" class="cta-button" style="background: transparent; border: 2px solid var(--peach); color: var(--peach);">Schedule a Visit</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <img src="../assets/images/logo.png" alt="The Citadel School Logo">
+          <div>
+            <h3>The Citadel School</h3>
+            <p>First Among Equals</p>
+          </div>
+        </div>
+        <p>Providing quality education from nursery to diploma level, nurturing future leaders with strong moral foundations since 1995.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Our Schools</h3>
+        <ul>
+          <li><a href="schools/nursery.html">Nursery School</a></li>
+          <li><a href="schools/primary.html">Primary School</a></li>
+          <li><a href="schools/secondary.html">Secondary School</a></li>
+          <li><a href="schools/diploma.html">Diploma Programs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <div class="contact-info">
+          <p><i class="icon-location"></i> Okoria, Agudama-Epie<br>Bayelsa State, Nigeria</p>
+          <p><i class="icon-phone"></i> +234 123 456 7890</p>
+          <p><i class="icon-email"></i> info@citadelschool.edu.ng</p>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2023 The Citadel School. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/modules/admissions.js"></script>
+</body>
+</html>

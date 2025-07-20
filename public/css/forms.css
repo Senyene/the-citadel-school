@@ -1,0 +1,568 @@
+      /* Forms Styling */
+      .application-form,
+      .contact-form {
+        max-width: 600px;
+        margin: 2rem auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: var(--oxblood);
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+        font-family: inherit;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--oxblood);
+        box-shadow: 0 0 0 3px rgba(74, 4, 4, 0.1);
+      }
+
+      .form-group input:invalid {
+        border-color: #e74c3c;
+      }
+
+      .form-group input:valid {
+        border-color: #27ae60;
+      }
+
+      .form-group small {
+        display: block;
+        margin-top: 0.5rem;
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      .checkbox-group {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .checkbox-group input[type="checkbox"] {
+        width: auto;
+        margin: 0;
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+      }
+
+      .checkbox-group label {
+        margin-bottom: 0;
+        font-weight: normal;
+        cursor: pointer;
+      }
+
+      .submit-button {
+        background: var(--oxblood);
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+      }
+
+      .submit-button:hover {
+        background: var(--oxblood-dark);
+        transform: translateY(-2px);
+      }
+
+      .submit-button:active {
+        transform: translateY(0);
+      }
+
+      .submit-button:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      /* Admission Requirements Tabs */
+      .requirements-tabs {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        border-bottom: 2px solid var(--peach-light);
+        padding-bottom: 0.5rem;
+      }
+
+      .requirements-tabs .tab-button {
+        padding: 0.75rem 1.5rem;
+        background: var(--peach-light);
+        border: none;
+        border-radius: 4px 4px 0 0;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+        bottom: -2px;
+      }
+
+      .requirements-tabs .tab-button.active {
+        background: var(--oxblood);
+        color: white;
+        border-bottom: 2px solid var(--oxblood);
+      }
+
+      .requirements-content .tab-content {
+        display: none;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      }
+
+      .requirements-content .tab-content.active {
+        display: block;
+      }
+
+      .requirement-note {
+        background: var(--peach-light);
+        padding: 1rem;
+        border-left: 3px solid var(--oxblood);
+        margin-top: 1.5rem;
+        font-size: 0.95rem;
+      }
+
+      .requirement-note strong {
+        color: var(--oxblood);
+      }
+
+      .tab-content h3 {
+        color: var(--oxblood);
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        border-bottom: 2px solid var(--peach);
+        padding-bottom: 0.5rem;
+      }
+
+      .tab-content ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      .tab-content ul li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      .tab-content ul li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--oxblood);
+        font-weight: bold;
+      }
+
+      .tab-content ul li:last-child {
+        border-bottom: none;
+      }
+
+      /* Admissions specific styles */
+      .admissions-hero {
+        background: linear-gradient(rgba(74, 4, 4, 0.8), rgba(74, 4, 4, 0.8)), 
+                    url('../assets/images/admissions-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-bottom: 3rem;
+      }
+
+      .admissions-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .admissions-process {
+        padding: 3rem 0;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .process-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .step {
+        text-align: center;
+        padding: 2rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .step:hover {
+        transform: translateY(-5px);
+      }
+
+      .step-number {
+        width: 60px;
+        height: 60px;
+        background: var(--oxblood);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 auto 1rem;
+      }
+
+      .step h3 {
+        color: var(--oxblood);
+        margin-bottom: 1rem;
+      }
+
+      .admission-requirements {
+        padding: 3rem 0;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .admission-requirements h2 {
+        text-align: center;
+        color: var(--oxblood);
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+
+      .online-application {
+        padding: 3rem 0;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .online-application h2 {
+        text-align: center;
+        color: var(--oxblood);
+        margin-bottom: 2rem;
+      }
+
+      /* Contact page styles */
+      .contact-hero {
+        background: linear-gradient(rgba(74, 4, 4, 0.8), rgba(74, 4, 4, 0.8)), 
+                    url('../assets/images/contact-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-bottom: 3rem;
+      }
+
+      .contact-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .contact-info {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        height: fit-content;
+      }
+
+      .contact-info h2 {
+        color: var(--oxblood);
+        margin-bottom: 2rem;
+      }
+
+      .info-item {
+        margin-bottom: 2rem;
+      }
+
+      .info-item h3 {
+        color: var(--oxblood);
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+      }
+
+      .info-item p {
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      .contact-form-section h2 {
+        color: var(--oxblood);
+        margin-bottom: 2rem;
+      }
+
+      .map-section {
+        padding: 3rem 0;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .map-section h2 {
+        text-align: center;
+        color: var(--oxblood);
+        margin-bottom: 2rem;
+      }
+
+      .map-container {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+
+      /* FAQ Styles */
+      .faq-item {
+        border: 1px solid #eee;
+      }
+
+      .faq-question {
+        background: none;
+        border: none;
+        width: 100%;
+        padding: 1.5rem;
+        text-align: left;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        color: var(--oxblood);
+        transition: background-color 0.3s ease;
+      }
+
+      .faq-question:hover {
+        background-color: var(--peach-light);
+      }
+
+      .faq-question.active {
+        background-color: var(--peach);
+      }
+
+      .faq-toggle {
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+      }
+
+      .faq-question.active .faq-toggle {
+        transform: rotate(45deg);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .faq-answer.active {
+        max-height: 200px;
+      }
+
+      .faq-answer p {
+        padding: 0 1.5rem 1.5rem;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      /* Form validation styles */
+      .form-group.error input,
+      .form-group.error select,
+      .form-group.error textarea {
+        border-color: #e74c3c;
+      }
+
+      .form-group.success input,
+      .form-group.success select,
+      .form-group.success textarea {
+        border-color: #27ae60;
+      }
+
+      .error-message {
+        color: #e74c3c;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        display: none;
+      }
+
+      .form-group.error .error-message {
+        display: block;
+      }
+
+      .success-message {
+        background: #d4edda;
+        color: #155724;
+        padding: 1rem;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        border: 1px solid #c3e6cb;
+      }
+
+      .loading-spinner {
+        display: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid var(--oxblood);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-right: 0.5rem;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .submit-button.loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .submit-button.loading .loading-spinner {
+        display: block;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .requirements-tabs {
+          flex-direction: column;
+          align-items: center;
+        }
+  
+        .requirements-tabs .tab-button {
+          width: 100%;
+          max-width: 300px;
+          border-radius: 4px;
+          bottom: 0;
+        }
+  
+        .process-steps {
+          grid-template-columns: 1fr;
+        }
+  
+        .contact-container {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+  
+        .admissions-hero h1,
+        .contact-hero h1 {
+          font-size: 2rem;
+        }
+  
+        .application-form,
+        .contact-form {
+          padding: 1.5rem;
+          margin: 1rem;
+        }
+  
+        .requirements-content .tab-content {
+          padding: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .step {
+          padding: 1.5rem;
+        }
+  
+        .step-number {
+          width: 50px;
+          height: 50px;
+          font-size: 1.2rem;
+        }
+  
+        .tab-content h3 {
+          font-size: 1.3rem;
+        }
+  
+        .application-form,
+        .contact-form {
+          padding: 1rem;
+        }
+  
+        .form-group {
+          margin-bottom: 1rem;
+        }
+  
+        .submit-button {
+          padding: 0.8rem 1.5rem;
+          font-size: 1rem;
+        }
+      }
+
+      /* Print styles for forms */
+      @media print {
+        .submit-button,
+        .faq-question {
+          display: none;
+        }
+  
+        .faq-answer {
+          max-height: none;
+          overflow: visible;
+        }
+  
+        .application-form,
+        .contact-form {
+          box-shadow: none;
+          border: 1px solid #ccc;
+        }
+      }

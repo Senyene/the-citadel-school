@@ -1,0 +1,8 @@
+{
+  "name": "the-citadel-school",
+  "version": "1.0.0",
+  "description": "Static site for The Citadel School",
+  "scripts": {
+    "build": "echo 'No build step needed for static site.'"
+  }
+}

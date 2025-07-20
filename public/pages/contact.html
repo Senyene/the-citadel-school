@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - The Citadel School</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/forms.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo-container">
+      <img src="../assets/images/logo.png" alt="The Citadel School Logo">
+      <div class="school-name">
+        <h1>The Citadel School</h1>
+        <p>First Among Equals</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Our Schools</a>
+          <ul class="dropdown-menu">
+            <li><a href="schools/nursery.html">Nursery School</a></li>
+            <li><a href="schools/primary.html">Primary School</a></li>
+            <li><a href="schools/secondary.html">Secondary School</a></li>
+            <li><a href="schools/diploma.html">Diploma Programs</a></li>
+          </ul>
+        </li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="news-events.html">News & Events</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+    <button class="mobile-menu-toggle">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" style="height: 300px; background: linear-gradient(rgba(74, 4, 4, 0.8), rgba(74, 4, 4, 0.8)), url('../assets/images/school-building.jpg'); background-size: cover; background-position: center;">
+      <div class="hero-content">
+        <h1>Contact The Citadel School</h1>
+        <p>We'd love to hear from you</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+          <div>
+            <h2 style="color: var(--oxblood); margin-bottom: 2rem; font-size: 2rem;">Get In Touch</h2>
+            
+            <div class="features-grid" style="grid-template-columns: 1fr; gap: 1.5rem;">
+              <div class="feature" style="text-align: left; padding: 1.5rem;">
+                <div class="feature-icon" style="font-size: 2rem; margin-bottom: 1rem;">📍</div>
+                <h3>Our Address</h3>
+                <p>The Citadel School<br>Okoria, Agudama-Epie<br>Bayelsa State, Nigeria</p>
+              </div>
+              
+              <div class="feature" style="text-align: left; padding: 1.5rem;">
+                <div class="feature-icon" style="font-size: 2rem; margin-bottom: 1rem;">📞</div>
+                <h3>Phone Numbers</h3>
+                <p>+234 123 456 7890<br>+234 987 654 3210</p>
+              </div>
+              
+              <div class="feature" style="text-align: left; padding: 1.5rem;">
+                <div class="feature-icon" style="font-size: 2rem; margin-bottom: 1rem;">✉️</div>
+                <h3>Email Addresses</h3>
+                <p>info@citadelschool.edu.ng<br>admissions@citadelschool.edu.ng</p>
+              </div>
+              
+              <div class="feature" style="text-align: left; padding: 1.5rem;">
+                <div class="feature-icon" style="font-size: 2rem; margin-bottom: 1rem;">🕒</div>
+                <h3>School Hours</h3>
+                <p>Monday - Friday: 7:30 AM - 4:00 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h2 style="color: var(--oxblood); margin-bottom: 1.5rem; font-size: 1.8rem;">Send Us a Message</h2>
+            <form id="contactForm" class="contact-form">
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold; color: var(--oxblood);">Your Name*</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border: 2px solid #ddd; border-radius: 4px; font-size: 1rem;">
+              </div>
+              
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold; color: var(--oxblood);">Email Address*</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid #ddd; border-radius: 4px; font-size: 1rem;">
+              </div>
+              
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: bold; color: var(--oxblood);">Phone Number</label>
+                <input type="tel" id="phone" name="phone" style="width: 100%; padding: 0.75rem; border: 2px solid #ddd; border-radius: 4px; font-size: 1rem;">
+              </div>
+              
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: bold; color: var(--oxblood);">Subject*</label>
+                <select id="subject" name="subject" required style="width: 100%; padding: 0.75rem; border: 2px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                  <option value="">Select a subject</option>
+                  <option value="admissions">Admissions Inquiry</option>
+                  <option value="academics">Academic Programs</option>
+                  <option value="feedback">Feedback/Suggestions</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div class="form-group" style="margin-bottom: 2rem;">
+                <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold; color: var(--oxblood);">Message*</label>
+                <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.75rem; border: 2px solid #ddd; border-radius: 4px; font-size: 1rem; resize: vertical;"></textarea>
+              </div>
+              
+              <button type="submit" class="cta-button" style="width: 100%; padding: 1rem; font-size: 1.1rem;">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background-color: var(--peach-light);">
+      <div class="container">
+        <h2 class="section-title">Visit Our Campus</h2>
+        <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.234567890123!2d6.123456789012345!3d4.98765432101234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwNTknMTUuNiJOIDbCsDA3JzI0LjgiRQ!5e0!3m2!1sen!2sng!4v1234567890123!5m2!1sen!2sng" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <p style="font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.8;">We welcome campus visits! Schedule a tour to see our facilities and meet our dedicated staff.</p>
+          <a href="admissions.html" class="cta-button">Schedule a Campus Tour</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <div class="schools-grid" style="text-align: left;">
+            <div class="school-card">
+              <div class="school-card-content">
+                <h3>What are your admission requirements?</h3>
+                <p>Admission requirements vary by level. Please visit our admissions page for detailed requirements for each school level from nursery to diploma programs.</p>
+              </div>
+            </div>
+            
+            <div class="school-card">
+              <div class="school-card-content">
+                <h3>When does the academic year begin?</h3>
+                <p>Our academic year typically begins in September. We also offer mid-year admissions in January for certain grade levels, subject to availability.</p>
+              </div>
+            </div>
+            
+            <div class="school-card">
+              <div class="school-card-content">
+                <h3>Do you offer scholarships?</h3>
+                <p>Yes, we offer merit-based scholarships and need-based financial aid. Contact our admissions office for more information about available opportunities.</p>
+              </div>
+            </div>
+            
+            <div class="school-card">
+              <div class="school-card-content">
+                <h3>What extracurricular activities are available?</h3>
+                <p>We offer a wide range of activities including sports, music, drama, debate club, science club, and various cultural activities to support holistic development.</p>
+              </div>
+            </div>
+            
+            <div class="school-card">
+              <div class="school-card-content">
+                <h3>What is your student-teacher ratio?</h3>
+                <p>We maintain small class sizes with an average student-teacher ratio of 15:1 to ensure personalized attention and quality education for every student.</p>
+              </div>
+            </div>
+            
+            <div class="school-card">
+              <div class="school-card-content">
+                <h3>Do you provide transportation?</h3>
+                <p>Yes, we offer safe and reliable school bus services covering various routes in Bayelsa State. Contact us for route information and fees.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background-color: var(--cream);">
+      <div class="container">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+          <h2 class="section-title">Connect With Us</h2>
+          <p style="font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.8;">Stay updated with the latest news, events, and announcements from The Citadel School. Follow us on social media and join our community.</p>
+          
+          <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+            <a href="#" class="social-links" style="display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: var(--oxblood); color: white; text-decoration: none; border-radius: 50%; font-size: 1.5rem; transition: all 0.3s ease;">📘</a>
+            <a href="#" class="social-links" style="display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: var(--oxblood); color: white; text-decoration: none; border-radius: 50%; font-size: 1.5rem; transition: all 0.3s ease;">🐦</a>
+            <a href="#" class="social-links" style="display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: var(--oxblood); color: white; text-decoration: none; border-radius: 50%; font-size: 1.5rem; transition: all 0.3s ease;">📷</a>
+            <a href="#" class="social-links" style="display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: var(--oxblood); color: white; text-decoration: none; border-radius: 50%; font-size: 1.5rem; transition: all 0.3s ease;">💼</a>
+          </div>
+          
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="news-events.html" class="cta-button">Latest News</a>
+            <a href="admissions.html" class="cta-button" style="background: var(--peach); color: var(--oxblood);">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <img src="../assets/images/logo.png" alt="The Citadel School Logo">
+          <div>
+            <h3>The Citadel School</h3>
+            <p>First Among Equals</p>
+          </div>
+        </div>
+        <p>Providing quality education from nursery to diploma level, nurturing future leaders with strong moral foundations since 1995.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Our Schools</h3>
+        <ul>
+          <li><a href="schools/nursery.html">Nursery School</a></li>
+          <li><a href="schools/primary.html">Primary School</a></li>
+          <li><a href="schools/secondary.html">Secondary School</a></li>
+          <li><a href="schools/diploma.html">Diploma Programs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <div class="contact-info">
+          <p><i class="icon-location"></i> Okoria, Agudama-Epie<br>Bayelsa State, Nigeria</p>
+          <p><i class="icon-phone"></i> +234 123 456 7890</p>
+          <p><i class="icon-email"></i> info@citadelschool.edu.ng</p>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2023 The Citadel School. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/modules/contact.js"></script>
+</body>
+</html>

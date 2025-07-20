@@ -1,0 +1,340 @@
+/* Schools Page Styles */
+.school-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.school-hero {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+.nursery-hero {
+  background: linear-gradient(rgba(74, 4, 4, 0.7), rgba(74, 4, 4, 0.7)), 
+              url('../assets/images/nursery-bg.jpg');
+}
+
+.primary-hero {
+  background: linear-gradient(rgba(74, 4, 4, 0.7), rgba(74, 4, 4, 0.7)), 
+              url('../assets/images/primary-bg.jpg');
+}
+
+.secondary-hero {
+  background: linear-gradient(rgba(74, 4, 4, 0.7), rgba(74, 4, 4, 0.7)), 
+              url('../assets/images/secondary-bg.jpg');
+}
+
+.diploma-hero {
+  background: linear-gradient(rgba(74, 4, 4, 0.7), rgba(74, 4, 4, 0.7)), 
+              url('../assets/images/diploma-bg.jpg');
+}
+
+.school-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.school-overview {
+  margin-bottom: 3rem;
+}
+
+.school-overview p {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.age-groups, .grade-levels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.age-group, .grade-level {
+  background: var(--peach-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.age-group h3, .grade-level h3 {
+  color: var(--oxblood);
+  margin-top: 0;
+}
+
+.curriculum {
+  margin: 3rem 0;
+}
+
+.curriculum-areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.curriculum-area {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.curriculum-area h3 {
+  color: var(--oxblood);
+  margin-top: 0;
+  border-bottom: 2px solid var(--peach);
+  padding-bottom: 0.5rem;
+}
+
+.daily-routine {
+  margin: 3rem 0;
+}
+
+.schedule {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+}
+
+.time {
+  font-weight: bold;
+  color: var(--oxblood);
+}
+
+.facilities {
+  margin: 3rem 0;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.facility {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.facility img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.facility h3 {
+  color: var(--oxblood);
+  padding: 0 1rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.facility p {
+  padding: 0 1rem 1rem;
+  margin: 0;
+}
+
+.special-programs, .exam-prep {
+  margin: 3rem 0;
+}
+
+.programs-grid, .exam-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.program, .exam-card, .program-card {
+  background: var(--peach-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.program h3, .exam-card h3, .program-card h3 {
+  color: var(--oxblood);
+  margin-top: 0;
+}
+
+.assessment {
+  margin: 3rem 0;
+}
+
+.assessment-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.method {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.method h3 {
+  color: var(--oxblood);
+  margin-top: 0;
+}
+
+.programs-offered {
+  margin: 3rem 0;
+}
+
+.admission-requirements {
+  margin: 3rem 0;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.admission-requirements h2 {
+  color: var(--oxblood);
+  margin-top: 0;
+}
+
+.admission-requirements ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.admission-requirements li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.curriculum-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab-button {
+  padding: 0.75rem 1.5rem;
+  background: var(--peach-light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background: var(--peach);
+}
+
+.tab-button.active {
+  background: var(--oxblood);
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.subject-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.subject-group {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.subject-group h4 {
+  color: var(--oxblood);
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.cta-section {
+  text-align: center;
+  margin: 4rem 0;
+  background: var(--peach-light);
+  padding: 3rem 2rem;
+  border-radius: 8px;
+}
+
+.cta-section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--oxblood);
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--oxblood);
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--oxblood-dark);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .school-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .age-groups, .grade-levels, .curriculum-areas {
+    grid-template-columns: 1fr;
+  }
+  
+  .subject-groups {
+    grid-template-columns: 1fr;
+  }
+  
+  .curriculum-tabs {
+    flex-direction: column;
+  }
+  
+  .tab-button {
+    width: 100%;
+  }
+}
