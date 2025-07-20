@@ -17,10 +17,12 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-// Cloud Function triggered on new Firestore document
-exports.notifyAdmin = functions.firestore
+// Cloud Function triggered on new Firestore document (in nam5 region)
+exports.notifyAdmin = functions
+  .region('us-central1') // ✅ Set correct region for Firestore
+  .firestore
   .document('messages/{messageId}')
-  .onCreate((snap, context) => {
+  .onCreate(async (snap, context) => {
     const data = snap.data();
     const messageId = context.params.messageId;
 
