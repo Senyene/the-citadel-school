@@ -1,0 +1,20 @@
+{
+  "name": "the-citadel-school",
+  "version": "1.0.0",
+  "description": "Static site for The Citadel School",
+  "scripts": {
+    "build": "echo 'No build step needed for static site.'"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "20"
+  },
+  "dependencies": {
+    "firebase-admin": "^11.11.1",
+    "firebase-functions": "^4.4.1",
+    "nodemailer": "^6.4.0"
+  }
+}
