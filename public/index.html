@@ -188,13 +188,10 @@
   </footer>
 
   <script type="module" src="./js/main.js"></script>
+ 
   <!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
 
-<!-- Firebase Config & Submission Script -->
+  <!-- Firebase Config & Submission Script -->
 <script type="module">
   import { db } from './js/firebase/config.js';
 
@@ -202,26 +199,32 @@
   if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
+
       const name = document.getElementById("name")?.value;
       const email = document.getElementById("email")?.value;
+      const phone = document.getElementById("phone")?.value;
+      const subject = document.getElementById("subject")?.value;
       const message = document.getElementById("message")?.value;
 
       try {
         await db.collection("messages").add({
           name,
           email,
+          phone,
+          subject,
           message,
-          createdAt: new Date()
+          timestamp: new Date().toISOString()
         });
-        alert("Message sent!");
+        alert("✅ Message sent!");
         form.reset();
       } catch (error) {
-        console.error("Error writing document: ", error);
+        console.error("❌ Error writing document: ", error);
         alert("Failed to send message.");
       }
     });
   }
 </script>
+
 
 </body>
 </html>

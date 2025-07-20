@@ -1,5 +1,4 @@
-import { db } from '../firebase/config.js';
-
+import { db, collection, addDoc, serverTimestamp } from './firebase/config.js';
 // Contact page functionality
 document.addEventListener('DOMContentLoaded', function() {
   initializeContactForm();
@@ -104,17 +103,14 @@ function getContactFieldLabel(field) {
 }
 
 
-function submitContactForm() {
-  // Contact form submission
+async function submitContactForm() {
   const submitButton = document.querySelector('.submit-button');
   const originalText = submitButton.textContent;
-  
-  // Show loading state
+
   submitButton.classList.add('loading');
   submitButton.disabled = true;
   submitButton.innerHTML = '<span class="loading-spinner"></span>Sending...';
-  
-  // Get form data
+
   const formData = new FormData(document.getElementById('contactForm'));
   const contactData = {
     name: formData.get('name'),
@@ -122,35 +118,28 @@ function submitContactForm() {
     phone: formData.get('phone'),
     subject: formData.get('subject'),
     message: formData.get('message'),
-    timestamp: new Date().toISOString()
+    timestamp: serverTimestamp()  // use Firestore-native timestamp
   };
-  
-  // Submit to Firestore
-  db.collection("messages").add(contactData)
-    .then((docRef) => {
-      // Reset button state
-      submitButton.classList.remove('loading');
-      submitButton.disabled = false;
-      submitButton.textContent = originalText;
 
-      // Show success message
-      showContactSuccessMessage();
+  try {
+    const docRef = await addDoc(collection(db, "messages"), contactData);
 
-      // Reset form
-      form.reset();
+    submitButton.classList.remove('loading');
+    submitButton.disabled = false;
+    submitButton.textContent = originalText;
 
-      // Remove saved draft
-      localStorage.removeItem('contactFormData');
-    })
-    .catch((error) => {
-      console.error("Error submitting to Firestore:", error);
-      alert("Something went wrong. Please try again.");
-      submitButton.classList.remove('loading');
-      submitButton.disabled = false;
-      submitButton.textContent = originalText;
-    });
-
+    showContactSuccessMessage(docRef.id); // ✅ show ID
+    document.getElementById('contactForm').reset();
+    localStorage.removeItem('contactFormData');
+  } catch (error) {
+    console.error("Error submitting to Firestore:", error);
+    alert("Something went wrong. Please try again.");
+    submitButton.classList.remove('loading');
+    submitButton.disabled = false;
+    submitButton.textContent = originalText;
+  }
 }
+
 
 function showContactSuccessMessage(messageId) {
   const form = document.getElementById('contactForm');
