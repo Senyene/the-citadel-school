@@ -193,7 +193,7 @@
 
   <!-- Firebase Config & Submission Script -->
 <script type="module">
-  import { db } from './js/firebase/config.js';
+  import { db, collection, addDoc } from './js/firebase/config.js';
 
   const form = document.getElementById("contactForm");
   if (form) {
@@ -207,13 +207,13 @@
       const message = document.getElementById("message")?.value;
 
       try {
-        await db.collection("messages").add({
+        await addDoc(collection(db, "messages"), {
           name,
           email,
           phone,
           subject,
           message,
-          timestamp: new Date().toISOString()
+          timestamp: Date.now() // Numeric timestamp for compatibility
         });
         alert("✅ Message sent!");
         form.reset();

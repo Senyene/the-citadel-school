@@ -1,3 +1,51 @@
+// Cloud Function triggered on new Firestore document in 'applications' collection
+exports.notifyAdminApplication = functions
+  .region('us-central1')
+  .firestore
+  .document('applications/{applicationId}')
+  .onCreate(async (snap, context) => {
+    const data = snap.data();
+    const applicationId = context.params.applicationId;
+
+    // Format uploaded documents as links
+    let documentsHtml = '';
+    if (Array.isArray(data.documents) && data.documents.length > 0) {
+      documentsHtml = '<ul>' + data.documents.map(doc => `<li><a href="${doc.url}">${doc.name}</a></li>`).join('') + '</ul>';
+    } else {
+      documentsHtml = '<em>No documents uploaded</em>';
+    }
+
+    const mailOptions = {
+      from: `The Citadel School <${gmailEmail}>`,
+      to: gmailEmail,
+      subject: `New Application Received [ID: ${applicationId}]`,
+      html: `
+        <h3>New Admission Application</h3>
+        <p><strong>Applicant Name:</strong> ${data.applicantName}</p>
+        <p><strong>Date of Birth:</strong> ${data.dob}</p>
+        <p><strong>Applying For:</strong> ${data.applyingFor}</p>
+        <p><strong>Parent/Guardian:</strong> ${data.parentName}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Phone:</strong> ${data.phone}</p>
+        <p><strong>Address:</strong> ${data.address}</p>
+        <p><strong>Previous School:</strong> ${data.previousSchool || ''}</p>
+        <p><strong>Additional Info:</strong> ${data.additionalInfo || ''}</p>
+        <p><strong>Agreed to Terms:</strong> ${data.agreeTerms ? 'Yes' : 'No'}</p>
+        <p><strong>Newsletter:</strong> ${data.newsletter ? 'Yes' : 'No'}</p>
+        <p><strong>Documents:</strong> ${documentsHtml}</p>
+        <hr>
+        <p><em>Submitted on:</em> ${data.timestamp ? new Date(data.timestamp).toLocaleString() : 'Unknown'}</p>
+      `
+    };
+
+    return transporter.sendMail(mailOptions)
+      .then(() => {
+        console.log('✅ Application email sent to admin.');
+      })
+      .catch(error => {
+        console.error('❌ Failed to send application email:', error);
+      });
+  });
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const nodemailer = require('nodemailer');
@@ -26,6 +74,22 @@ exports.notifyAdmin = functions
     const data = snap.data();
     const messageId = context.params.messageId;
 
+    // Handle Firestore Timestamp or JS timestamp
+    let submittedDate = '';
+    if (data.timestamp) {
+      if (typeof data.timestamp === 'object' && data.timestamp._seconds) {
+        // Firestore Timestamp object
+        submittedDate = new Date(data.timestamp._seconds * 1000).toLocaleString();
+      } else if (typeof data.timestamp === 'number') {
+        // JS timestamp (ms)
+        submittedDate = new Date(data.timestamp).toLocaleString();
+      } else {
+        submittedDate = String(data.timestamp);
+      }
+    } else {
+      submittedDate = 'Unknown';
+    }
+
     const mailOptions = {
       from: `The Citadel School <${gmailEmail}>`,
       to: gmailEmail,
@@ -38,7 +102,7 @@ exports.notifyAdmin = functions
         <p><strong>Subject:</strong> ${data.subject}</p>
         <p><strong>Message:</strong><br>${data.message}</p>
         <hr>
-        <p><em>Submitted on:</em> ${new Date(data.timestamp).toLocaleString()}</p>
+        <p><em>Submitted on:</em> ${submittedDate}</p>
       `
     };
 

@@ -275,5 +275,39 @@
 
   <script type="module" src="../js/main.js"></script>
   <script type="module" src="../js/modules/contact.js"></script>
+
+  <!-- Firebase Config & Submission Script -->
+  <script type="module">
+    import { db, collection, addDoc } from '../js/firebase/config.js';
+
+    const form = document.getElementById("contactForm");
+    if (form) {
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("name")?.value;
+        const email = document.getElementById("email")?.value;
+        const phone = document.getElementById("phone")?.value;
+        const subject = document.getElementById("subject")?.value;
+        const message = document.getElementById("message")?.value;
+
+        try {
+          await addDoc(collection(db, "messages"), {
+            name,
+            email,
+            phone,
+            subject,
+            message,
+            timestamp: Date.now() // Numeric timestamp for compatibility
+          });
+          alert("✅ Message sent!");
+          form.reset();
+        } catch (error) {
+          console.error("❌ Error writing document: ", error);
+          alert("Failed to send message.");
+        }
+      });
+    }
+  </script>
 </body>
 </html>

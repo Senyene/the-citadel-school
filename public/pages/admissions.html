@@ -371,7 +371,75 @@
     </div>
   </footer>
 
+
   <script type="module" src="../js/main.js"></script>
   <script type="module" src="../js/modules/admissions.js"></script>
+
+  <!-- Firebase Config & Application Submission Script with File Upload -->
+  <script type="module">
+    import { db, collection, addDoc } from '../js/firebase/config.js';
+    import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-storage.js";
+
+    const appForm = document.getElementById("applicationForm");
+    if (appForm) {
+      appForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const applicantName = document.getElementById("applicantName")?.value;
+        const dob = document.getElementById("dob")?.value;
+        const applyingFor = document.getElementById("applyingFor")?.value;
+        const parentName = document.getElementById("parentName")?.value;
+        const email = document.getElementById("email")?.value;
+        const phone = document.getElementById("phone")?.value;
+        const address = document.getElementById("address")?.value;
+        const previousSchool = document.getElementById("previousSchool")?.value;
+        const additionalInfo = document.getElementById("additionalInfo")?.value;
+        const agreeTerms = document.getElementById("agreeTerms")?.checked;
+        const newsletter = document.getElementById("newsletter")?.checked;
+        const filesInput = document.getElementById("documents");
+        const files = filesInput?.files;
+
+        let uploadedFiles = [];
+        if (files && files.length > 0) {
+          const storage = getStorage();
+          for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const storageRef = ref(storage, `applications/${Date.now()}_${file.name}`);
+            try {
+              await uploadBytes(storageRef, file);
+              const url = await getDownloadURL(storageRef);
+              uploadedFiles.push({ name: file.name, url });
+            } catch (err) {
+              console.error(`Failed to upload file: ${file.name}`, err);
+            }
+          }
+        }
+
+        try {
+          await addDoc(collection(db, "applications"), {
+            applicantName,
+            dob,
+            applyingFor,
+            parentName,
+            email,
+            phone,
+            address,
+            previousSchool,
+            additionalInfo,
+            agreeTerms,
+            newsletter,
+            documents: uploadedFiles,
+            timestamp: Date.now()
+          });
+          alert("✅ Application submitted!");
+          appForm.reset();
+        } catch (error) {
+          console.error("❌ Error writing application: ", error);
+          alert("Failed to submit application.");
+        }
+      });
+    }
+  </script>
+
 </body>
 </html>
